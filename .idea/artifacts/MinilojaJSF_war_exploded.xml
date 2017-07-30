@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MinilojaJSF:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MinilojaJSF_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MinilojaJSF/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MinilojaJSF" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

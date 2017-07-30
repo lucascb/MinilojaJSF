@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Meu carrinho - Miniloja JSF</title>
+    </h:head>
+    <h:body>
+        <h:link value="Gerenciar loja" outcome="loja"/>
+        <h1>Produtos</h1>
+        <p:dataTable var="product" value="#{lojaBean.products}" border="2">
+            <p:column headerText="Descrição">
+                <h:outputText value="#{product.description}"/>
+            </p:column>
+            <p:column headerText="Preço">
+                <h:outputText value="#{product.price}"/>
+            </p:column>
+            <p:column>
+                <h:form>
+                    <h:commandButton value="+" action="#{carrinhoBean.comprarProduto}">
+                        <f:param name="itemSelecionado" value="#{product.id}"/>
+                    </h:commandButton>
+                </h:form>
+            </p:column>
+        </p:dataTable>
+        <h1>Meu carrinho</h1>
+        <p:dataTable var="item" value="#{carrinhoBean.itens}" border="2">
+            <p:column headerText="Descrição">
+                <h:outputText value="#{item.produto.description}"/>
+            </p:column>
+            <p:column headerText="Preço">
+                <h:outputText value="#{item.produto.price}"/>
+            </p:column>
+            <p:column>
+                <h:form>
+                    <h:commandButton value="x" action="#{carrinhoBean.removerProduto}">
+                        <f:param name="itemSelecionado" value="#{item.id}"/>
+                    </h:commandButton>
+                </h:form>
+            </p:column>
+        </p:dataTable>
+        <h:panelGrid>
+            <b>Subtotal: </b>
+            <h:outputText value="R$ #{carrinhoBean.subtotal}"/>
+            <h:form>
+                <h:commandButton value="Finalizar compra" action="#{carrinhoBean.finalizarCompra}"/>
+            </h:form>
+        </h:panelGrid>
+    </h:body>
+</html>
