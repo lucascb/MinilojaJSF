@@ -169,7 +169,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
+    <option name="x" value="2000" />
     <option name="y" value="-5" />
     <option name="width" value="1841" />
     <option name="height" value="1086" />
@@ -709,15 +709,15 @@
       <workItem from="1499955705533" duration="75000" />
       <workItem from="1501168785774" duration="3113000" />
       <workItem from="1501369634918" duration="8554000" />
-      <workItem from="1501382811825" duration="15008000" />
+      <workItem from="1501382811825" duration="15192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30207000" />
+    <option name="totallyTimeSpent" value="30391000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="-5" width="1841" height="1086" extended-state="6" />
+    <frame x="2000" y="-5" width="1841" height="1086" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
